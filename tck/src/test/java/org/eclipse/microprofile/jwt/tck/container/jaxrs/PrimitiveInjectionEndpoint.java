@@ -19,9 +19,9 @@
  */
 package org.eclipse.microprofile.jwt.tck.container.jaxrs;
 
-import org.eclipse.microprofile.jwt.Claim;
-import org.eclipse.microprofile.jwt.Claims;
-
+import java.util.List;
+import java.util.Set;
+import javax.annotation.security.RolesAllowed;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.json.Json;
@@ -31,10 +31,11 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
-import java.util.List;
-import java.util.Set;
+import org.eclipse.microprofile.jwt.Claim;
+import org.eclipse.microprofile.jwt.Claims;
 
 @Path("/endp")
+@RolesAllowed("Tester")
 @RequestScoped
 public class PrimitiveInjectionEndpoint {
     @Inject
