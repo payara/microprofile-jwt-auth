@@ -81,10 +81,10 @@ public class PublicKeyAsPEMLocationURLTest extends Arquillian {
         // Setup the microprofile-config.properties content
         Properties configProps = new Properties();
         // Read in the base URL of deployment since it cannot be injected for use by this method
-        String jwksBaseURL = System.getProperty("mp.jwt.tck.jwks.baseURL", "http://localhost:8080/");
+        String pemBaseURL = System.getProperty("mp.jwt.tck.pem.baseURL", "http://localhost:8080/");
         // Location points to the PEM endpoint of the deployment
-        System.out.printf("baseURL=%s\n", jwksBaseURL);
-        URL pemURL = new URL(new URL(jwksBaseURL), "pem/endp/publicKey4k");
+        System.out.printf("baseURL=%s\n", pemBaseURL);
+        URL pemURL = new URL(new URL(pemBaseURL), "pem/endp/publicKey4k");
         System.out.printf("pemURL=%s\n", pemURL);
         configProps.setProperty(Names.VERIFIER_PUBLIC_KEY_LOCATION, pemURL.toExternalForm());
         configProps.setProperty(Names.ISSUER, TCKConstants.TEST_ISSUER);
