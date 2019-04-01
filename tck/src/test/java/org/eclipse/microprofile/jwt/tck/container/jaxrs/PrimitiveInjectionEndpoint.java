@@ -35,8 +35,8 @@ import org.eclipse.microprofile.jwt.Claim;
 import org.eclipse.microprofile.jwt.Claims;
 
 @Path("/endp")
-@RolesAllowed("Tester")
 @RequestScoped
+@RolesAllowed("Tester")
 public class PrimitiveInjectionEndpoint {
     @Inject
     @Claim("raw_token")
