@@ -24,7 +24,7 @@
     </parent>
 
     <artifactId>microprofile-jwt-auth-api</artifactId>
-    <version>1.1.1.payara-p1</version>
+    <version>1.1.1.payara-p2-SNAPSHOT</version>
     <name>MicroProfile JWT Auth API</name>
     <description>Eclipse MicroProfile JWT Feature - API</description>
 
